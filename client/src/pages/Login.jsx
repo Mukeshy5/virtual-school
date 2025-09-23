@@ -15,7 +15,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Login = () => {
   return (
-    <div className="flex w-full max-w-sm flex-col gap-6 justify-center mx-auto mt-10">
+    <div className="flex w-full max-w-sm flex-col gap-6 justify-center mx-auto mt-10 cursor-pointer">
       <Tabs defaultValue="account">
         <TabsList>
           <TabsTrigger value="signUp">Sign-Up</TabsTrigger>
