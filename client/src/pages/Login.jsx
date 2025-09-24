@@ -1,5 +1,5 @@
 import { AppWindowIcon, CodeIcon } from "lucide-react";
-
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -14,9 +14,35 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Login = () => {
+  const [signUpInput, setsignUpInput] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const [loginInput, setLoginInput] = useState({ email: "", password: "" });
+
+  // Track which tab is active
+  const [activeTab, setActiveTab] = useState("signUp");
+
+  const ChangeInputhandler = (e) => {
+    const { name, value } = e.target;
+    if (activeTab === "signUp") {
+      setsignUpInput({ ...signUpInput, [name]: value });
+    } else {
+      setLoginInput({ ...loginInput, [name]: value });
+    }
+  };
+
+  const handleRegistation = (type) =>{
+    const inputData = type === "signUp" ? signUpInput : loginInput;
+    // Here you can handle the registration or login logic
+    console.log(inputData);
+  }
+
   return (
-    <div className="flex w-full max-w-sm flex-col gap-6 justify-center mx-auto mt-10">
-      <Tabs defaultValue="account">
+    <div className="flex w-full max-w-sm flex-col gap-6 justify-center mx-auto mt-20">
+      <Tabs defaultValue="signUp" onValueChange={setActiveTab}>
         <TabsList>
           <TabsTrigger value="signUp">Sign-Up</TabsTrigger>
           <TabsTrigger value="login">Login</TabsTrigger>
@@ -32,15 +58,40 @@ const Login = () => {
             <CardContent className="grid gap-6">
               <div className="grid gap-3">
                 <Label htmlFor="tabs-demo-name">Name</Label>
-                <Input id="tabs-demo-name" defaultValue="Name" />
+                <Input
+                  type="text"
+                  name="name"
+                  value={signUpInput.name}
+                  onChange={ChangeInputhandler}
+                  placeholder=" Enter your name"
+                  required
+                />
               </div>
               <div className="grid gap-3">
-                <Label htmlFor="tabs-demo-username">Username</Label>
-                <Input id="tabs-demo-username" defaultValue="@peduarte" />
+                <Label htmlFor="Email">Email</Label>
+                <Input
+                  type="email"
+                  name="email"
+                  value={signUpInput.email}
+                  onChange={ChangeInputhandler}
+                  placeholder=" Enter your Email"
+                  required
+                />
+              </div>
+              <div className="grid gap-3">
+                <Label htmlFor="tabs-demo-name">Password</Label>
+                <Input
+                  type="password"
+                  name="password"
+                  value={signUpInput.password}
+                  onChange={ChangeInputhandler}
+                  placeholder="Create your password"
+                  required
+                />
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Sign-Up</Button>
+              <Button onClick={() => handleRegistation("signUp")} >Sign-Up</Button>
             </CardFooter>
           </Card>
         </TabsContent>
@@ -48,28 +99,40 @@ const Login = () => {
           <Card>
             <CardHeader>
               <CardTitle>login</CardTitle>
-              <CardDescription>
-                Enter your details and loging.
-              </CardDescription>
+              <CardDescription>Enter your details and loging.</CardDescription>
             </CardHeader>
             <CardContent className="grid gap-6">
               <div className="grid gap-3">
-                <Label htmlFor="tabs-demo-current">Current password</Label>
-                <Input id="tabs-demo-current" type="password" />
+                <Label htmlFor="tabs-demo-current">Enter Email</Label>
+                <Input
+                  type="email"
+                  name="email"
+                  value={loginInput.email}
+                  onChange={ChangeInputhandler}
+                  placeholder=" Enter your Email"
+                  required
+                />
               </div>
               <div className="grid gap-3">
-                <Label htmlFor="tabs-demo-new">New password</Label>
-                <Input id="tabs-demo-new" type="password" />
+                <Label htmlFor="tabs-demo-new">Your password</Label>
+                <Input
+                  type="password"
+                  name="password"
+                  value={loginInput.password}
+                  onChange={ChangeInputhandler}
+                  placeholder="Password"
+                  required
+                />
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Login</Button>
+              <Button onClick={() => handleRegistation("login")} >Login</Button>
             </CardFooter>
           </Card>
         </TabsContent>
       </Tabs>
     </div>
   );
-}
+};
 
-export default Login
+export default Login;
