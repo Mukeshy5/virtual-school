@@ -41,8 +41,13 @@ const Login = () => {
   }
 
   return (
+<<<<<<< HEAD
     <div className="flex w-full max-w-sm flex-col gap-6 justify-center mx-auto mt-20">
       <Tabs defaultValue="signUp" onValueChange={setActiveTab}>
+=======
+    <div className="flex w-full max-w-sm flex-col gap-6 justify-center mx-auto mt-10 cursor-pointer">
+      <Tabs defaultValue="account">
+>>>>>>> fc3348647dcaebfe01716707d827f0d1ecd2c827
         <TabsList>
           <TabsTrigger value="signUp">Sign-Up</TabsTrigger>
           <TabsTrigger value="login">Login</TabsTrigger>
