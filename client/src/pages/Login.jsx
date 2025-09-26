@@ -39,7 +39,7 @@ const Login = () => {
                 <Input id="tabs-demo-username" defaultValue="@peduarte" />
               </div>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="flex justify-start">
               <Button>Sign-Up</Button>
             </CardFooter>
           </Card>
@@ -62,7 +62,7 @@ const Login = () => {
                 <Input id="tabs-demo-new" type="password" />
               </div>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="flex justify-start">
               <Button>Login</Button>
             </CardFooter>
           </Card>
