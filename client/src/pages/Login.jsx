@@ -41,21 +41,16 @@ const Login = () => {
   }
 
   return (
-<<<<<<< HEAD
     <div className="flex w-full max-w-sm flex-col gap-6 justify-center mx-auto mt-20">
       <Tabs defaultValue="signUp" onValueChange={setActiveTab}>
-=======
-    <div className="flex w-full max-w-sm flex-col gap-6 justify-center mx-auto mt-10 cursor-pointer">
-      <Tabs defaultValue="account">
->>>>>>> fc3348647dcaebfe01716707d827f0d1ecd2c827
         <TabsList>
           <TabsTrigger value="signUp">Sign-Up</TabsTrigger>
           <TabsTrigger value="login">Login</TabsTrigger>
         </TabsList>
         <TabsContent value="signUp">
-          <Card>
-            <CardHeader>
-              <CardTitle>signUp</CardTitle>
+          <Card className="">
+            <CardHeader className="">
+              <CardTitle className= "flex justify-center items-center uppercase">signUp</CardTitle>
               <CardDescription>
                 Create a new account and click signup when you'are done.
               </CardDescription>
@@ -103,7 +98,7 @@ const Login = () => {
         <TabsContent value="login">
           <Card>
             <CardHeader>
-              <CardTitle>login</CardTitle>
+              <CardTitle className= "flex justify-center items-center uppercase">login</CardTitle>
               <CardDescription>Enter your details and loging.</CardDescription>
             </CardHeader>
             <CardContent className="grid gap-6">

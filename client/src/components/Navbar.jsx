@@ -21,9 +21,9 @@ const Navbar = () => {
   const user = true;
   return (
     <>
-      <div className="h-16 dark:bg-[#0A0A0A]  border-b dark:border-b-gray-800 bg-blue-500 border-b-purple-800 fixed top-0 left-0 right-0 duration-300 z-10">
+      <div className="h-16 dark:bg-[#0A0A0A]  border-b dark:border-b-gray-800 bg-white border-b-purple-800 fixed top-0 left-0 right-0 duration-300 z-10">
         <div className="max-w-7xl mx-auto hidden h-full md:flex justify-between items-center gap-10">
-          <div className="text-white flex items-center gap-2">
+          <div className="text-blue-500 flex items-center gap-2">
             <School size={25} className="" />
             <h1 className="hidden md:block font-extrabold text-2xl ">
               Virtual School
@@ -52,7 +52,7 @@ const Navbar = () => {
 
                   <DropdownMenuItem>
                     Log out
-                    <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+                    <DropdownMenuShortcut>⌘</DropdownMenuShortcut>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>

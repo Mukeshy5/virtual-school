@@ -1,9 +1,10 @@
-import { Input } from "@/components/ui/input";
 import React from "react";
+import { Input } from "@/components/ui/input";
 
-const HeroSection = () => {
+const App = () => {
   return (
-    <div className="relative bg-gradient-to-tr from-blue-500 to-indigo-600 dark:from-gray-800 dark:to-gray-900 py-24 px-4 text-center">
+    <div>
+      <div className="relative bg-gradient-to-tr from-blue-500 to-indigo-600 dark:from-gray-800 dark:to-gray-900 py-24 px-4 text-center">
       <div className="max-w-3xl mx-auto ">
         <h1 className="text-white text-4xl font-bold mb-4">
           Find the Best Courses for You
@@ -31,12 +32,8 @@ const HeroSection = () => {
         </button>
       </div>
     </div>
-  );
-};
+    </div>
+  )
+}
 
-<<<<<<< HEAD
-export default HeroSection
- 
-=======
-export default HeroSection;
->>>>>>> fc3348647dcaebfe01716707d827f0d1ecd2c827
+export default App
