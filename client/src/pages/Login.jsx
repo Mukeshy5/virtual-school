@@ -90,8 +90,8 @@ const Login = () => {
                 />
               </div>
             </CardContent>
-            <CardFooter className="flex justify-start">
-              <Button onClick={() => handleRegistation('signUp')}>Sign-Up</Button>
+            <CardFooter>
+              <Button onClick={() => handleRegistation("signUp")} >Sign-Up</Button>
             </CardFooter>
           </Card>
         </TabsContent>
@@ -125,8 +125,8 @@ const Login = () => {
                 />
               </div>
             </CardContent>
-            <CardFooter className="flex justify-start">
-              <Button onClick={() => handleRegistation('login')}>Login</Button>
+            <CardFooter>
+              <Button onClick={() => handleRegistation("login")} >Login</Button>
             </CardFooter>
           </Card>
         </TabsContent>
