@@ -27,9 +27,7 @@ const Navbar = () => {
           <div className="text-blue-500 flex items-center gap-2">
             <School size={25} className="" />
             <h1 className="hidden md:block font-extrabold text-2xl ">
-              <Link to={'/'}>
-                Virtual School
-              </Link>
+              <Link to={"/"}>Virtual School</Link>
             </h1>
           </div>
           {/* <dark mode and user icon */}
@@ -43,18 +41,24 @@ const Navbar = () => {
                   <DropdownMenuLabel>My Account</DropdownMenuLabel>
                   <DropdownMenuGroup>
                     <DropdownMenuItem>
-                      Profile
+                      <Link to={'/MyLearning'}>
+                        My learning
+                      </Link>
                       <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
                     </DropdownMenuItem>
 
                     <DropdownMenuItem>
-                      Settings
+                      Edit Profile
                       <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
                     </DropdownMenuItem>
                   </DropdownMenuGroup>
 
                   <DropdownMenuItem>
                     Log out
+                    <DropdownMenuShortcut>⌘</DropdownMenuShortcut>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    Dashboad
                     <DropdownMenuShortcut>⌘</DropdownMenuShortcut>
                   </DropdownMenuItem>
                 </DropdownMenuContent>

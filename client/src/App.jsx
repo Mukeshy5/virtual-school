@@ -7,6 +7,8 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./pages/admin/student/HeroSection";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import MainLayout from "./Layout/MainLayout";
+import Courses from "./pages/admin/student/Courses";
+import MyLearning from "./pages/admin/student/MyLearning";
 
 const appRouter = createBrowserRouter([
   {
@@ -18,14 +20,18 @@ const appRouter = createBrowserRouter([
         element: (
           <>
             <HeroSection />
-            {/* <Courses/> */}
+            <Courses />
           </>
         ),
       },
       {
         path: "/login",
-        element:<Login/>
-      }
+        element: <Login />,
+      },
+      {
+        path: "/MyLearning",
+        element: <MyLearning />,
+      },
     ],
   },
 ]);
@@ -33,7 +39,7 @@ const appRouter = createBrowserRouter([
 const App = () => {
   return (
     <>
-      <RouterProvider router={appRouter}/>
+      <RouterProvider router={appRouter} />
     </>
   );
 };
