@@ -55,7 +55,7 @@ const Navbar = () => {
 
                   <DropdownMenuItem>
                     Log out
-                    <DropdownMenuShortcut>⌘</DropdownMenuShortcut>
+                    <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     Dashboad
@@ -65,7 +65,7 @@ const Navbar = () => {
               </DropdownMenu>
             ) : (
               <div className="flex items-center gap-2 ">
-                <button variant="outline">Login</button>
+                <Button variant="outline">Login</Button>
                 <Button>SignUp</Button>
               </div>
             )}
